@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f5f7" />
+    <link rel="icon" type="image/png" href="./assets/favicon-rounded.png" />
+    <title>RVT Store | Gadgets Fit for Royalty</title>
+    <meta
+      name="description"
+      content="RVT Store catalog for earbuds, chargers, flash drives, power banks, and tech accessories with same-day delivery and direct ordering."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Instrument+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="RVT Store header">
+      <a class="brand-lockup" href="#top" aria-label="RVT Store home">
+        <img src="./assets/rvt-logo-light.jpg" alt="RVT Store logo" />
+        <span>RVT Store</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#catalog">Catalog</a>
+        <a href="#order">Order</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="header-action" href="https://t.me/RVTStore_CustomerService" target="_blank" rel="noreferrer">
+        Message RVT
+      </a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-aurora" aria-hidden="true"></div>
+        <img class="hero-mark" src="./assets/rvt-logo-dark.jpg" alt="" aria-hidden="true" />
+
+        <div class="hero-copy">
+          <p class="overline">RVT updated store price list</p>
+          <h1 id="hero-title">Gadgets fit for royalty.</h1>
+          <p class="hero-subtitle">
+            A cleaner way to shop RVT Store: premium earbuds, power, storage, and accessories with
+            free same-day delivery.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#catalog">Shop the catalog</a>
+            <a class="button glass" href="https://www.instagram.com/royalvalue_techstore/" target="_blank" rel="noreferrer">
+              View Instagram
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-stage" aria-hidden="true">
+          <img class="stage-product stage-left" src="./assets/products/oraimo-power-bank.png" alt="" />
+          <img class="stage-product stage-main" src="./assets/products/spacebuds-neo-plus.png" alt="" />
+          <img class="stage-product stage-right" src="./assets/products/transformers-earbuds.png" alt="" />
+        </div>
+
+        <div class="hero-footer" aria-label="RVT Store highlights">
+          <span>20 products in stock</span>
+          <span>Free same-day delivery</span>
+          <span>@RVTStore_CustomerService</span>
+        </div>
+      </section>
+
+      <section class="signal-strip" aria-label="Store promises">
+        <article>
+          <span>01</span>
+          <h2>Clear pricing</h2>
+          <p>No scrolling through chat screenshots. Every item is easy to compare and order.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h2>Product-first</h2>
+          <p>Real product photos make RVT feel more trusted, polished, and ready to buy from.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h2>Fast checkout</h2>
+          <p>Customers select what they want and send a ready-made order message in seconds.</p>
+        </article>
+      </section>
+
+      <section class="brand-panel" aria-label="RVT Store brand campaign">
+        <img src="./assets/rvt-gear-poster.jpg" alt="RVT Store Gear Up brand campaign" />
+        <div>
+          <p class="overline">Royal Value Tech Store</p>
+          <h2>Luxury identity. Tech confidence. Simple ordering.</h2>
+          <p>
+            RVT already has a premium visual language. This site turns that identity into a clean
+            buying experience that feels deliberate, fast, and professional.
+          </p>
+        </div>
+      </section>
+
+      <section class="catalog" id="catalog" aria-labelledby="catalog-title">
+        <div class="catalog-head">
+          <div>
+            <p class="overline">Full catalog</p>
+            <h2 id="catalog-title">RVT updated store price list.</h2>
+          </div>
+          <p>
+            Every price uses the correct naira sign, and every product can be added straight into a
+            customer-ready order message.
+          </p>
+        </div>
+
+        <div class="shop-controls" role="tablist" aria-label="Product categories">
+          <button class="category-control active" data-category="all" type="button" role="tab" aria-selected="true">
+            All
+          </button>
+          <button class="category-control" data-category="audio" type="button" role="tab" aria-selected="false">
+            Earbuds
+          </button>
+          <button class="category-control" data-category="charging" type="button" role="tab" aria-selected="false">
+            Cords & Chargers
+          </button>
+          <button class="category-control" data-category="storage" type="button" role="tab" aria-selected="false">
+            Flashdrives
+          </button>
+          <button class="category-control" data-category="accessory" type="button" role="tab" aria-selected="false">
+            Others
+          </button>
+        </div>
+
+        <div class="product-grid" id="product-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="order" id="order" aria-labelledby="order-title">
+        <div class="order-copy">
+          <p class="overline">Quick order</p>
+          <h2 id="order-title">Build an order. Send it cleanly.</h2>
+          <p>
+            Select items from the catalog, adjust quantities, and open a pre-filled WhatsApp order
+            for RVT Store.
+          </p>
+        </div>
+
+        <div class="order-panel">
+          <div class="order-items">
+            <p class="order-label">Selected items</p>
+            <p class="empty-order" id="empty-order">No items selected yet.</p>
+            <ul class="order-list" id="order-list"></ul>
+          </div>
+
+          <aside class="order-summary" aria-label="Order summary">
+            <span>Total estimate</span>
+            <strong id="order-total">₦0.00</strong>
+            <a class="button primary disabled" id="order-link" href="#" aria-disabled="true">
+              Send order on WhatsApp
+            </a>
+            <a class="telegram-link" href="https://t.me/RVTStore_CustomerService" target="_blank" rel="noreferrer">
+              Or message on Telegram
+            </a>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <div class="cart-bar" id="cart-bar" hidden>
+      <div>
+        <span id="cart-count">0 items selected</span>
+        <strong id="cart-total">₦0.00</strong>
+      </div>
+      <a href="#order">View order</a>
+      <a class="cart-send" id="cart-whatsapp" href="#" aria-disabled="true">WhatsApp</a>
+    </div>
+
+    <footer class="site-footer" id="contact">
+      <div>
+        <img src="./assets/rvt-logo-light.jpg" alt="RVT Store logo" />
+        <h2>RVT Store</h2>
+        <p>Gadgets fit for royalty. Premium tech, clear pricing, and free same-day delivery.</p>
+      </div>
+
+      <address>
+        <a href="mailto:rvtstoreng@gmail.com">rvtstoreng@gmail.com</a>
+        <a href="tel:+2348154117064">08154117064</a>
+        <a href="https://t.me/RVT_store" target="_blank" rel="noreferrer">Telegram channel: @RVT_store</a>
+        <a href="https://t.me/RVTStore_CustomerService" target="_blank" rel="noreferrer">Order: @RVTStore_CustomerService</a>
+        <a href="https://www.instagram.com/royalvalue_techstore/" target="_blank" rel="noreferrer">@royalvalue_techstore</a>
+      </address>
+    </footer>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
