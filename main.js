@@ -197,6 +197,7 @@ const cartCount = document.querySelector("#cart-count");
 const cartTotal = document.querySelector("#cart-total");
 const cartWhatsapp = document.querySelector("#cart-whatsapp");
 const telegramLink = document.querySelector("#telegram-link");
+let telegramOrderMessage = "";
 
 function priceLabel(price) {
   return `₦${formatter.format(price)}`;
@@ -281,6 +282,8 @@ function updateOrder() {
     cartWhatsapp.href = "#";
     cartWhatsapp.setAttribute("aria-disabled", "true");
     telegramLink.href = "https://t.me/RVTStore_CustomerService";
+    telegramLink.textContent = "Or message on Telegram";
+    telegramOrderMessage = "";
     return;
   }
 
@@ -298,9 +301,10 @@ function updateOrder() {
   ].join("\n");
 
   const whatsappHref = `https://wa.me/2348154117064?text=${encodeURIComponent(message)}`;
-  const telegramHref = `https://t.me/share/url?url=${encodeURIComponent("https://t.me/RVTStore_CustomerService")}&text=${encodeURIComponent(message)}`;
   orderLink.href = whatsappHref;
-  telegramLink.href = telegramHref;
+  telegramLink.href = "https://t.me/RVTStore_CustomerService";
+  telegramLink.textContent = "Copy order + open Telegram";
+  telegramOrderMessage = message;
   orderLink.classList.remove("disabled");
   orderLink.removeAttribute("aria-disabled");
   cartBar.hidden = false;
@@ -390,6 +394,66 @@ orderList.addEventListener("click", (event) => {
     updateOrder();
     rerenderActiveCatalog();
   }
+});
+
+function fallbackCopyOrderText(text) {
+  const field = document.createElement("textarea");
+  field.value = text;
+  field.setAttribute("readonly", "");
+  field.style.position = "fixed";
+  field.style.left = "-9999px";
+  field.style.top = "0";
+  document.body.appendChild(field);
+  field.select();
+
+  try {
+    return document.execCommand("copy");
+  } finally {
+    document.body.removeChild(field);
+  }
+}
+
+async function copyOrderText(text) {
+  if (navigator.clipboard?.writeText) {
+    try {
+      await navigator.clipboard.writeText(text);
+      return true;
+    } catch {
+      return fallbackCopyOrderText(text);
+    }
+  }
+
+  return fallbackCopyOrderText(text);
+}
+
+telegramLink.addEventListener("click", async (event) => {
+  if (!telegramOrderMessage) {
+    return;
+  }
+
+  event.preventDefault();
+
+  // Telegram cannot prefill regular chats like WhatsApp, so copy first and open the chat.
+  const copyPromise = copyOrderText(telegramOrderMessage);
+  const opened = window.open("https://t.me/RVTStore_CustomerService", "_blank");
+
+  if (!opened) {
+    window.location.href = "https://t.me/RVTStore_CustomerService";
+    return;
+  }
+
+  opened.opener = null;
+
+  const copied = await copyPromise;
+  telegramLink.textContent = copied ? "Copied - paste in Telegram" : "Copy manually for Telegram";
+
+  if (!copied) {
+    window.prompt("Copy this order message, then paste it in Telegram:", telegramOrderMessage);
+  }
+
+  setTimeout(() => {
+    telegramLink.textContent = selected.size ? "Copy order + open Telegram" : "Or message on Telegram";
+  }, 2600);
 });
 
 renderProducts();
