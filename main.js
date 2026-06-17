@@ -5,7 +5,7 @@ const products = [
     type: "Wired audio",
     name: "Oraimo Earpiece",
     price: 3000,
-    image: "./assets/products/oraimo-earpiece.png",
+    image: "./assets/optimized/products/oraimo-earpiece.webp",
     copy: "Everyday wired sound for calls, lectures, and quick listening.",
   },
   {
@@ -14,7 +14,7 @@ const products = [
     type: "Type-C audio",
     name: "Oraimo Type-C Earpiece",
     price: 4500,
-    image: "./assets/products/oraimo-type-c-earpiece.png",
+    image: "./assets/optimized/products/oraimo-type-c-earpiece.webp",
     copy: "A simple upgrade for newer phones without a 3.5mm headphone port.",
   },
   {
@@ -23,7 +23,7 @@ const products = [
     type: "Wireless earbuds",
     name: "Itel BudsAir",
     price: 15000,
-    image: "./assets/products/itel-budsair.png",
+    image: "./assets/optimized/products/itel-budsair.webp",
     copy: "Clean wireless audio with a friendly everyday price point.",
   },
   {
@@ -32,7 +32,7 @@ const products = [
     type: "Statement earbuds",
     name: "Tecno Optimus Prime Transformers Earbuds",
     price: 15000,
-    image: "./assets/products/transformers-earbuds.png",
+    image: "./assets/optimized/products/transformers-earbuds.webp",
     copy: "A bolder pick for customers who want their tech to look different.",
   },
   {
@@ -41,7 +41,7 @@ const products = [
     type: "Spatial earbuds",
     name: "Oraimo SpaceBuds Lite",
     price: 16000,
-    image: "./assets/products/spacebuds-lite.png",
+    image: "./assets/optimized/products/spacebuds-lite.webp",
     copy: "Compact wireless earbuds with a modern case and clean daily feel.",
   },
   {
@@ -50,7 +50,7 @@ const products = [
     type: "Neckband",
     name: "Oraimo Necklace Lite",
     price: 17500,
-    image: "./assets/products/necklace-lite.png",
+    image: "./assets/optimized/products/necklace-lite.webp",
     copy: "A comfortable neckband option for longer listening and calls.",
   },
   {
@@ -59,7 +59,7 @@ const products = [
     type: "Spatial earbuds",
     name: "Oraimo SpaceBuds Neo",
     price: 19000,
-    image: "./assets/products/spacebuds-neo.png",
+    image: "./assets/optimized/products/spacebuds-neo.webp",
     copy: "A sharp wireless choice for sound, portability, and style.",
   },
   {
@@ -68,7 +68,7 @@ const products = [
     type: "Wireless earbuds",
     name: "LDNIO T06",
     price: 21000,
-    image: "./assets/products/ldnio-t06.png",
+    image: "./assets/optimized/products/ldnio-t06.webp",
     copy: "Minimal earbuds with a clean charging case and easy carry size.",
   },
   {
@@ -77,7 +77,7 @@ const products = [
     type: "ANC earbuds",
     name: "Oraimo SpaceBuds Neo+",
     price: 23000,
-    image: "./assets/products/spacebuds-neo-plus.png",
+    image: "./assets/optimized/products/spacebuds-neo-plus.webp",
     copy: "Active noise cancellation and a premium look at a strong RVT price.",
   },
   {
@@ -86,7 +86,7 @@ const products = [
     type: "Wireless earbuds",
     name: "Oraimo FreePods Neo",
     price: 24000,
-    image: "./assets/products/freepods-neo.png",
+    image: "./assets/optimized/products/freepods-neo.webp",
     copy: "A reliable everyday earbud option with strong battery-led appeal.",
   },
   {
@@ -95,7 +95,7 @@ const products = [
     type: "Flagship earbuds",
     name: "Oraimo SpaceBuds Pro",
     price: 130000,
-    image: "./assets/products/spacebuds-pro.png",
+    image: "./assets/optimized/products/spacebuds-pro.webp",
     copy: "The showcase item for customers who want the top-tier audio pick.",
   },
   {
@@ -104,7 +104,7 @@ const products = [
     type: "Cable",
     name: "Oraimo Type-C Cord",
     price: 2700,
-    image: "./assets/products/type-c-cord.png",
+    image: "./assets/optimized/products/type-c-cord.webp",
     copy: "A daily charging essential for Android and Type-C devices.",
   },
   {
@@ -113,7 +113,7 @@ const products = [
     type: "Cable",
     name: "Oraimo Type-C to C Cord",
     price: 3500,
-    image: "./assets/products/type-c-to-c-cord.png",
+    image: "./assets/optimized/products/type-c-to-c-cord.webp",
     copy: "Fast, modern Type-C to Type-C charging for newer adapters and phones.",
   },
   {
@@ -122,7 +122,7 @@ const products = [
     type: "Cable",
     name: "Oraimo Apple Cord",
     price: 3000,
-    image: "./assets/products/apple-cord.png",
+    image: "./assets/optimized/products/apple-cord.webp",
     copy: "A clean Lightning cable option for iPhone users.",
   },
   {
@@ -131,7 +131,7 @@ const products = [
     type: "Charger kit",
     name: "Oraimo Full Apple Charger",
     price: 5000,
-    image: "./assets/products/full-apple-charger.png",
+    image: "./assets/optimized/products/full-apple-charger.webp",
     copy: "A complete charger setup for customers who need the full kit.",
   },
   {
@@ -140,7 +140,7 @@ const products = [
     type: "Flashdrive",
     name: "SanDisk Cruzer Blade 16GB",
     price: 8000,
-    image: "./assets/products/sandisk-16.png",
+    image: "./assets/optimized/products/sandisk-16.webp",
     copy: "Compact storage for documents, media, and quick transfers.",
   },
   {
@@ -149,7 +149,7 @@ const products = [
     type: "Flashdrive",
     name: "SanDisk Cruzer Blade 32GB",
     price: 12500,
-    image: "./assets/products/sandisk-32.png",
+    image: "./assets/optimized/products/sandisk-32.webp",
     copy: "A balanced capacity for school files, videos, and everyday backups.",
   },
   {
@@ -158,7 +158,7 @@ const products = [
     type: "Flashdrive",
     name: "SanDisk Cruzer Blade 64GB",
     price: 16000,
-    image: "./assets/products/sandisk-64.png",
+    image: "./assets/optimized/products/sandisk-64.webp",
     copy: "More space for heavier files while staying portable.",
   },
   {
@@ -167,7 +167,7 @@ const products = [
     type: "Smart accessory",
     name: "Universal Stylus Pen",
     price: 12500,
-    image: "./assets/products/stylus-pen.png",
+    image: "./assets/optimized/products/stylus-pen.webp",
     copy: "A sleek accessory for notes, sketches, tablets, and touchscreens.",
   },
   {
@@ -176,7 +176,7 @@ const products = [
     type: "Power essential",
     name: "Oraimo Power Bank 10,000mAh",
     price: 14500,
-    image: "./assets/products/oraimo-power-bank.png",
+    image: "./assets/optimized/products/oraimo-power-bank.webp",
     copy: "Reliable backup power for campus, commutes, and long days out.",
   },
 ];
@@ -210,7 +210,7 @@ function productCard(product) {
   return `
     <article class="product-card reveal" data-category="${product.category}">
       <div class="product-media">
-        <img src="${product.image}" alt="${product.name}" loading="lazy" />
+        <img src="${product.image}" alt="${product.name}" loading="lazy" decoding="async" width="720" height="720" />
       </div>
       <div class="product-body">
         <div class="product-meta">
@@ -254,7 +254,7 @@ function updateOrder() {
     .map(
       ({ product, quantity }) => `
         <li class="order-item">
-          <img src="${product.image}" alt="" aria-hidden="true" />
+          <img src="${product.image}" alt="" aria-hidden="true" loading="lazy" decoding="async" width="72" height="72" />
           <div>
             <span>${product.name}</span>
             <strong>${priceLabel(product.price)} x ${quantity}</strong>
