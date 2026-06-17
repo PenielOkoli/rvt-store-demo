@@ -196,6 +196,7 @@ const cartBar = document.querySelector("#cart-bar");
 const cartCount = document.querySelector("#cart-count");
 const cartTotal = document.querySelector("#cart-total");
 const cartWhatsapp = document.querySelector("#cart-whatsapp");
+const telegramLink = document.querySelector("#telegram-link");
 
 function priceLabel(price) {
   return `₦${formatter.format(price)}`;
@@ -279,6 +280,7 @@ function updateOrder() {
     cartBar.hidden = true;
     cartWhatsapp.href = "#";
     cartWhatsapp.setAttribute("aria-disabled", "true");
+    telegramLink.href = "https://t.me/RVTStore_CustomerService";
     return;
   }
 
@@ -296,7 +298,9 @@ function updateOrder() {
   ].join("\n");
 
   const whatsappHref = `https://wa.me/2348154117064?text=${encodeURIComponent(message)}`;
+  const telegramHref = `https://t.me/share/url?url=${encodeURIComponent("https://t.me/RVTStore_CustomerService")}&text=${encodeURIComponent(message)}`;
   orderLink.href = whatsappHref;
+  telegramLink.href = telegramHref;
   orderLink.classList.remove("disabled");
   orderLink.removeAttribute("aria-disabled");
   cartBar.hidden = false;
